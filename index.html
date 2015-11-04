@@ -11,14 +11,15 @@
     <title>Jason Gonzalez</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="Cover%20Template%20for%20Bootstrap_files/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/portafolio.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="Cover%20Template%20for%20Bootstrap_files/cover.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="Cover%20Template%20for%20Bootstrap_files/ie-emulation-modes-warning.js"></script>
+    <script src="javascript/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -40,10 +41,10 @@
             <div class="inner">
               <h3 class="masthead-brand">Soy Jason</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#" id="projects">Proyectos</a></li>
-                <li><a href="#" id="about">Sobre mí</a></li>
-                <li><a href="#" id="contact">Contácteme</a></li>
+                <li class="active"><a id="btnHome" href="#">Inicio</a></li>
+                <li><a href="#" id="btnProjects">Proyectos</a></li>
+                <li><a href="#" id="btnAbout">Sobre mí</a></li>
+                <li><a href="#" id="btnContact">Contácteme</a></li>
               </ul>
             </div>
           </div>
@@ -51,8 +52,31 @@
           <div class="inner cover">
 		  
 		  
-			<div id="firstScreen" name="firstScreen">
+			<div id="home" name="home">
             <h1 class="cover-heading">"Vivamos y veremos" - Julio Verne.</h1>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Ver más</a>
+            </p>
+			</div>
+			
+			<div id="projects" name="projects" style="display:none">
+            <h1 class="cover-heading">Proyectos</h1>
+            <a href="http://stcconsultores.com"><img class="stc" src="images/stc.jpg"></a>
+            <p class="lead">
+              <!--<a href="#" class="btn btn-lg btn-default">Ver más</a>-->
+            </p>
+			</div>
+			
+			
+			<div id="about" name="about" style="display:none">
+            <h1 class="cover-heading">Acerca de mi</h1>
+            <p class="lead">
+              <h3>Mi nombre es Jasson González Torrez. Soy estudiante de Ingeniería en Computación en el ITCR.</h3>
+            </p>
+			</div>
+			
+			<div id="contact" name="contact" style="display:none">
+            <h1 class="cover-heading">"Mi numero de telefono es</h1>
             <p class="lead">
               <a href="#" class="btn btn-lg btn-default">Ver más</a>
             </p>
@@ -93,8 +117,11 @@
     </div>
 	
 	<script>
+		
 	
 	</script>
+	
+	 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -104,6 +131,43 @@
     <script src="javascript/docs.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="javascript/ie10-viewport-bug-workaround.js"></script>
+    
+      <script>
+    $(document).ready(function () {
+        $('#btnProjects').click(function () {
+            $('#home').hide();
+            $('#about').hide();
+            $('#contact').hide();
+            $('#projects').fadeIn(2000);
+          
+        });
+    
+        $('#btnAbout').click(function () {
+            $('#home').hide();
+            $('#projects').hide();
+            $('#contact').hide();
+            $('#about').fadeIn(2000);
+             });
+             
+       $('#btnContact').click(function () {
+            $('#about').hide();
+            $('#projects').hide();
+            $('#contact').hide();
+            $('#contact').fadeIn(2000);
+             });
+             
+       $('#btnHome').click(function () {
+            $('#about').hide();
+            $('#projects').hide();
+            $('#contact').hide();
+            $('#home').fadeIn(2000);
+             });
+        
+        
+    });
+        
+    
+    </script>
   
 
 <div data-original-title="Copy to clipboard" title="" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" class="global-zeroclipboard-container" id="global-zeroclipboard-html-bridge">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" height="100%" width="100%">         <param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1412381292060">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com">         <embed src="Cover%20Template%20for%20Bootstrap_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com" scale="exactfit" height="100%" width="100%">                </object></div></body></html>
